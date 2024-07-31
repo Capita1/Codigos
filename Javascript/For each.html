@@ -1,0 +1,21 @@
+<html>
+	<head>
+    <meta charset="utf-8">
+		<title>Array</title>
+	</head>
+  <body>
+    <table>
+      <tr>
+        <th>Indice</th>
+        <th>Valor</th>
+      </tr>
+      <script>
+        var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+        listaFuncionarios.forEach(function(valor, indice, array){ 
+          document.write('<tr><td>'+indice+'</td>'+'<td>'+valor+'</td></tr>')
+          console.log(array)
+        })
+      </script>
+    </table>
+  </body>	
+</html>

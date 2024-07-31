@@ -1,0 +1,32 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.coisas{
+    display: flex;
+}
+ul.coisas>li{
+    padding:10px 20px ;
+    background:url(../imagens/seta.png) rgb(247, 182, 0) no-repeat left center;
+    border:1px solid rgb(248, 148, 122);
+    width: 100px;
+    
+}
+ul a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    background: url(../imagens/menu.png) no-repeat left bottom;
+    text-decoration: none;
+    text-indent: 40px;
+    color: black;
+    line-height: 40px;
+}
+a:hover{
+    background-position:right bottom;
+    color: white;
+}

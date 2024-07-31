@@ -1,0 +1,22 @@
+a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:link{
+    color: #b9c941;
+    /*links não visitado*/
+}
+a:visited{
+    color: #c0c0c0;
+    /*links visitados*/
+}
+a:hover{
+    color:#FFF;
+    background: #6d790f;
+    /*links passa cursor em cima*/
+}
+a:active{
+    color: #e4f371;
+    /*links ativos*/
+}
