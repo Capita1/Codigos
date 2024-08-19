@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import time
 def spinner(dly):
     spin=('/','-','\\','|')
@@ -36,7 +37,39 @@ def convercaoIMC(n,a,p):
     classificacao=('Baixo peso muito grave','Baixo peso grave','Baixo peso','Peso normal','Sobrepeso','Obesidade grau I','Obesidade grau II','Obesidade grau III')
     print(f"{n} possui índice de massa corporal igual a {round(((p/((a/100)*(a/100)))*100)/100,2)} sendo classificado como {classificacao[i]}")
 
-choice=int(input("1 = gira\n2 = conversão de temperatura\n3 = converter segundo em h:m:s\n4 = conversão do IMC\nEscolha: "))
+def contarExtenso(u):
+    u = int(u)
+    uni_ex=['','Primeiro','Segundo','Terceiro','Quarto','Quinto','Sexto','Sétimo','Oitavo','Nono','Décimo']
+    dez_ex=['','Décimo','Vigésimo','Trigésimo','Quagragésimo','Quinquagésimo','Sextagésimo','Septuagésimo','Octagésimo','Nonagésimo']
+    cem_ex=['','Centésimo','Ducentésimo','Tricentésimo','Quadringentésimo','Quingentésimo','Seiscentésimo','Septingentésimo','Octingentésimo','Noningentésimo']
+    mil_ex=['','Milésimo']
+    unidade= 0
+    dezena=0
+    centena=0
+    #descobre o valor da unidade
+    unidade = int(u)
+    while unidade >= 10:
+        unidade -= 10
+    #descobre o valor da dezena
+    dezena = u
+    while dezena >= 100:
+        dezena -= 100
+    dezena -= unidade
+    dezena /= 10
+    if False == isinstance(dezena, int):
+        dezena = int(dezena)
+    #descobre o valor da centena
+    centena = u
+    while centena >= 1000:
+        centena -= 1000
+    centena -= unidade
+    centena /= 100
+    if False == isinstance(centena, int):
+        centena = int(centena)
+    print (f'Indice:{centena}{dezena}{unidade}')
+    print (cem_ex[centena],dez_ex[dezena],uni_ex[unidade])
+
+choice=int(input("1 = gira\n2 = conversão de temperatura\n3 = converter segundo em h:m:s\n4 = conversão do IMC\n5 = número classificação\nEscolha: "))
 if choice==1:
     dly=float(input('Delay em segundos:'))
     spinner(dly)
@@ -50,3 +83,6 @@ if choice==4:
     a=float(input('Sua altura em centimetros:'))
     p=float(input('Seu peso em KG:'))
     convercaoIMC(n,a,p)
+if choice==5:
+    u=input('Número: ')
+    contarExtenso(u)
