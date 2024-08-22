@@ -21,7 +21,7 @@ while(loop):
         time.sleep(1)
         print(f'\t[{30-s}]',end='\r')
 
-    if (x == 5):
+    if (len(x) >= 1):
         fig, ax = plt.subplots()
         ax.plot(x, y)
         ax.set(xlabel='hora', ylabel='USD',
