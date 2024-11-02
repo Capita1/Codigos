@@ -1,0 +1,1 @@
+hyprctl monitors all  | wofi -S dmenu
