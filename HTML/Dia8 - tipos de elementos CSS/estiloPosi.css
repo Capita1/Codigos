@@ -1,0 +1,36 @@
+body{
+    background: #007fc7;
+    
+}
+#container{
+    background: #FFF;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+}
+h1{
+    position: static;
+}
+p{
+    width: 300px;
+}
+.relativo{
+    position:  relative;
+    bottom: 214px;
+    left: 310px;
+}
+.absoluto{
+    /*baseado na janela com posicao definida*/
+    position: absolute;
+    background: #f4f4f470;
+    top: 300px;
+    right: 200px;
+}
+.fixo{
+    position: fixed;
+    left: 999px;
+    top: 400px;
+    background: #f4f4f470;
+    margin: 0px;
+}

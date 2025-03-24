@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript - conversão de temperatura</title>
+        <meta charset="utf-8">     
+        <script>
+            var uni = prompt('1 = de °C para °F\n2 = de °F para °C\n2 = de °C para K\n3 = de K para °C\n4 = de °F para K\n5 = de K para °F ')
+var temp = prompt('temperatura?')
+
+switch (parseInt(uni)) {
+    case 1:
+        document.write(temp*1.8+32)
+        break
+    case 2:
+        document.write(temp-32/1.8)
+        break
+    case 3:
+        document.write(temp+273.15)
+        break
+    case 4:
+        document.write(temp-273.15)
+        break
+    case 5:
+        document.write(temp+459.67/1.8)
+        break
+    case 6:
+        document.write(temp*1.8-459.67)
+        break
+    default:
+        document.write('invalido')
+        break
+}
+
+
+        </script>    
+    </head>
+    <body>
+    </body>
+</html>

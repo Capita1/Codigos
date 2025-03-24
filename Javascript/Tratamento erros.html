@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>erros</title>
+        <meta charset="utf-8">      
+    </head>
+<body>
+  <script>
+    var escolha = prompt('Escolhe')//cria a variavel escolha
+    var video = Array()//cria o array video
+    var tamanho = 3//tamanho do array video
+
+    //transforma todo o indice em array 
+    while (1 <= tamanho){
+      tamanho -= 1
+      video[tamanho] = Array()
+    }
+    
+    //adiciona string no indice dentro do indice
+    video[0]['nome'] = 'Cyberpunk Edgerunners'
+    video[0]['categoria'] = 'Anime'
+    video[1]['nome'] = 'Fullmetal Alchemist'
+    video[1]['categoria'] = 'Anime'
+    video[2]['nome'] = 'Tengen Toppa Gurren Lagann'
+    video[2]['categoria'] = 'Anime'
+
+    //tratamento de erro
+    function GetVideo(video, escolha) {
+      try{
+        document.write('você escolheu:'+video[escolha]['nome'])
+      }catch(erro){
+        document.write('Aconteceu algo inesperado<br>'+erro)
+      }finally{
+        console.log('Sempre passa aqui')
+      }    
+      console.log('A aplicação não morreu')  
+    }
+
+    //executa a função com o tratamento de erro
+    GetVideo(video, escolha)
+
+  </script>
+</body>
+</html>
